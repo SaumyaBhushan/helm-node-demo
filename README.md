@@ -1,12 +1,12 @@
 # Helm Demo with Node.js App
 
-In this assignment I have created s sample demo app and created a dockerfile and tried to deploy it through kubernetes .
+In this assingment I have created sample demo app and created a dockerfile and tried to deploy it through kubernetes .
 
 ### Step 1
 
 - Created Node.js app and run it locally
 - Dockerised it using Dockerfile and Podman
-- Created image and container succesfully to test the application
+- Created image and container successfully to test the application
 - Created node pool for EKS 
 - Pushed the image to ECR
 
@@ -22,7 +22,7 @@ In this assignment I have created s sample demo app and created a dockerfile and
 
 ## Challenges
 
-- Since host name was needed to bind the loadbalancer dns a record with ingress , I ddint have any public DNS Server to create a CNAME and show the app running . I didnt have IP and hence I cant use host as well to show the app running
+- Since host name was needed to bind the loadbalancer dns a record with ingress , I didn't have any public DNS Server to create a CNAME and show the app running . I didn't have IP and hence I cant use host as well to show the app running
 
 ## deployment for a production environment
 
@@ -36,8 +36,9 @@ In this assignment I have created s sample demo app and created a dockerfile and
 - Use WAF with Layer 7 LB
 - Replicas count should be more than 1 
 - May use Blue green deployment strategy
-- enable resource quots
+- enable resource quotas
 - Use liveness and readiness probes
+- pod Disruption budget
 
 To run this application : 
 
@@ -79,9 +80,15 @@ To run this application :
   ```
    helm history demo-app
   ```
-- To rollback to previos release
+- To rollback to previous release
 
 
    ```
   helm rollback demo-app <REVISION NO>
-   ```  
+   ```
+![Screenshot (2)](https://github.com/SaumyaBhushan/helm-node-demo/assets/76432998/0e415a87-b3f1-4ff0-8bf3-00509b4e3e10)
+
+![Screenshot (3)](https://github.com/SaumyaBhushan/helm-node-demo/assets/76432998/1903ac27-1a84-4751-8512-0c66e548bc72)
+
+
+   
