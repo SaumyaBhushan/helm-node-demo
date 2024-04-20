@@ -46,28 +46,39 @@ To run this application :
   docker build -t nodeapp:v1 <path to Dockerfile>
   ```
 - *Install the helm chart of ingress controller*
+
   ```
  helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.2.0
   ```
 - Install the app using helm 
   go to helm/demo-app/ folder
+
+
   ```
   helm install <release-name> .
   ```
 
 - To check release
+
+
    ```
    helm list
    ```
-- To update after a change \
+- To update after a change 
+
+
    ```
     helm upgrade --install demo-app .
     ```
 - To see the release
+
+
   ```
    helm history demo-app
   ```
 - To rollback to previos release
+
+
    ```
   helm rollback demo-app <REVISION NO>
    ```  
