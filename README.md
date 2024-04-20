@@ -47,16 +47,19 @@ To run this application :
   ```
 - *Install the helm chart of ingress controller*
 
+
   ```
- helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.2.0
+  helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.2.0
   ```
+
+
 - Install the app using helm 
   go to helm/demo-app/ folder
 
-
-  ```
-  helm install <release-name> .
-  ```
+ 
+   ```
+   helm install <release-name> .
+   ```
 
 - To check release
 
@@ -67,7 +70,7 @@ To run this application :
 - To update after a change 
 
 
-   ```
+    ```
     helm upgrade --install demo-app .
     ```
 - To see the release
